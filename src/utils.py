@@ -3,7 +3,6 @@ import numpy as np
 import tensorflow.compat.v1 as tf
 tf.disable_v2_behavior() 
 
-
 def rgb2gray(screen):
     return np.dot(screen[..., :3], [0.299, 0.587, 0.114])
 

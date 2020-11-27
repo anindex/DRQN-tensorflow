@@ -1,6 +1,7 @@
 import numpy as np
 import os
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior() 
 import shutil
 from functools import reduce
 from tensorflow.python import debug as tf_debug
