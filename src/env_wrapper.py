@@ -1,6 +1,6 @@
 import gym
 import retro
-from src.utils import resize, rgb2gray
+from cv2 import resize, cvtColor
 import numpy as np
 
 
@@ -139,7 +139,7 @@ class RetroWrapper():
 
     @property
     def screen(self):
-        a = resize(rgb2gray(self._screen) ,(self.screen_height, self.screen_width))
+        a = resize(cvtColor(self._screen, cv2.COLOR_BGR2GRAY), (self.screen_height, self.screen_width))
         return a
 
     @property
